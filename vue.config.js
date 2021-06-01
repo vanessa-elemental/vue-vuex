@@ -1,11 +1,3 @@
-/*module.exports = {
-    loader: "sass-loader",
-    options: {
-        prependData: `@import "./styles/scss/config.scss";`
-    }
-}*/
-
-
 module.exports = {
     css: {
         extract: true,
