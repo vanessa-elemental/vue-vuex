@@ -1,35 +1,11 @@
 import { createLogger, createStore } from 'vuex'
 
 // Modules
-/*const customers = {
-    namespaced: true,
-    state: {
-        list: [],
-        loading: false
-    },
-    mutations: {
-        add(state, customer) {
-            state.list.unshift(customer)
-        },
-        set(state, customers) {
-            state.list = customers
-        },
-        setLoading(state, loading) {
-            state.loading = loading
-        }
-    },
-    actions: {
-        async get( { commit }) {
-            commit('setLoading', true)
-            const result = await fetch('https://rickandmortyapi.com/api/character')
-            const json = await result.json
-            commit('set', json)
-            commit('setLoading', false)
-        }
-    }
-}*/
+import Register from './modules/register'
 
-export const store = createStore ({
+
+
+export default createStore ({
     plugins: [createLogger()],
     state: {
         counter: 10
@@ -48,5 +24,6 @@ export const store = createStore ({
         setCount: ({ commit }) => commit('setCounter'),
     },
     modules: {
+        register: Register
     }
 })

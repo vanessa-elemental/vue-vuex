@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { store } from './store/index'
+import createStore from './store/index'
 import App from './App.vue'
 import router from './router'
 import './styles/css/tailwind.css'
@@ -7,5 +7,5 @@ import './styles/css/tailwind.css'
 
 createApp(App)
     .use(router)
-    .use(store)
+    .use(createStore)
     .mount('#app')

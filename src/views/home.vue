@@ -1,6 +1,5 @@
 <template>
-<div id="app">
-    <router-view/>
+<div>
         <div>WELCOME TO KALE CAPITAL !!!</div>
         <h5 class="mt-5">{{counter}} x 2 = {{times2}} </h5>
         <button @click="inc">Increment</button>
