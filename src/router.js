@@ -4,17 +4,24 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from '@/views/home.vue'
 import Login from '@/views/login.vue'
 import Register from '@/views/register.vue'
+import Begin from '@/views/begin.vue'
+import TermsAndConditions from '@/views/terms-and-conditions.vue'
 
 
 const routes = [
   {
     path: "/",
-    name: "Register",
-    component: Register,
+    name: "Begin",
+    component: Begin,
+  },
+  {
+    path: "/begin",
+    redirect: '/',
   },
   {
     path: "/register",
-    redirect: '/',
+    name: "Register",
+    component: Register
   },
   {
     path: "/login",
@@ -25,6 +32,11 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/terms-and-conditions",
+    name: "Terms and conditions",
+    component: TermsAndConditions,
   },
 ];
 
