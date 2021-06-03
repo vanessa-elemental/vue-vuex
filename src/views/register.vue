@@ -120,7 +120,7 @@ import { ref } from 'vue'
 import User from '@/entities/user'
 import router from '@/router'
 import { validateEmail, validateMatchedPasswords, validatePassword, validateCheckbox } from '@/tools/validations'
-import { validateUser } from '@/services/register'
+import { userAlreadyExists } from '@/services/user'
 import OnBoarding from '@/views/on-boarding.vue'
 
 export default {
@@ -144,7 +144,6 @@ export default {
                 this.submittedPwd = false;
             } else {
                 this.onChangeRepeatedPwd();
-                console.log(this.hasError)
                 if (this.hasError.error && this.hasError.type === 'repeated-pwd') {
                     this.submittedPwd = false;
                 } else {
@@ -169,7 +168,7 @@ export default {
     }, 
 
     validateUser() {
-        this.hasError = validateUser(/*this.user*/);
+        this.hasError = userAlreadyExists(/*this.user*/);
     },
 
     onChangeTermsConditions() {

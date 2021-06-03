@@ -48,7 +48,7 @@ export const validatePassword = (password) => {
         const matches = regex.exec(password);
         return {
             error: (!matches)? true: false, 
-            message: (!matches)? 'Esta contraseña es incorrecta.': '',
+            message: (!matches)? 'Esta contraseña es incorrecta. Una contraseña válida se compone de 8 a 15 caracteres, con al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.': '',
             type: 'password'
         };
     } else {
