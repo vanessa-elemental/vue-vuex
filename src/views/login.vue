@@ -23,7 +23,7 @@
           <div class="flex flex-col space-y-1 items-start justify-start w-full">
             <p class="text-sm font-medium leading-tight text-gray-700">Email</p>
             <div class="flex flex-col space-y-1 items-start justify-start w-full">
-              <div class="inline-flex items-center justify-between w-full">
+              <div class="inline-flex items-center justify-between w-full custom-input-error">
                   <input v-if="hasError.error && (hasError.type === 'email' || hasError.type === 'string' || hasError.type === 'user')"
                   id="email" name="email" type="email" v-model="user.email" @change="onChangeEmail" placeholder="email@example.com" required class="text-base leading-normal text-red-900 appearance-none block w-full px-3 py-2 bg-white shadow border rounded-md border border-red-300 placeholder-red-900 focus:outline-none focus:ring-red-300 focus:border-red-300 sm:text-sm"
                   />
@@ -39,7 +39,7 @@
 
           <div class="flex flex-col space-y-1 items-start justify-start w-full">
             <p class="text-sm font-medium leading-tight text-gray-700">Contraseña</p>
-            <div class="inline-flex items-center justify-between w-full">
+            <div class="inline-flex items-center justify-between w-full custom-input-error">
                 <input v-if="hasError.error && (hasError.type === 'password' || hasError.type === 'string')"
                 id="password" name="password" type="password" v-model="user.password" @change="onChangePassword" placeholder="Ingresa tu contraseña" required class="text-base leading-normal text-red-900 appearance-none block w-full px-3 py-2 bg-white shadow border rounded-md border border-red-300 placeholder-red-900 focus:outline-none focus:ring-red-300 focus:border-red-300 sm:text-sm"
                   />
@@ -150,11 +150,15 @@ export default {
 <style lang="scss" scoped>
   .email-error {
     position: absolute;
-    right: 53px;
+    right: 13px;
   }
 
   .email-error-left {
     position: absolute;
     left: 60px;
+  }
+
+  .custom-input-error {
+    position: relative;
   }
 </style>
