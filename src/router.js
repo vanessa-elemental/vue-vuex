@@ -5,6 +5,7 @@ import Home from '@/views/home.vue'
 import Login from '@/views/login.vue'
 import Register from '@/views/register.vue'
 import Begin from '@/views/begin.vue'
+import RecoverPwd from '@/views/recover-pwd.vue'
 import TermsAndConditions from '@/views/terms-and-conditions.vue'
 
 
@@ -37,6 +38,11 @@ const routes = [
     path: "/terms-and-conditions",
     name: "Terms and conditions",
     component: TermsAndConditions,
+  },
+  {
+    path: "/recover-pwd",
+    name: "Recover Password",
+    component: RecoverPwd,
   },
 ];
 
